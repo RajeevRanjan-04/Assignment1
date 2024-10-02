@@ -1,0 +1,49 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin: 0 0 8px;
+  }
+  
+  .card-status,
+  .card-priority,
+  .card-user {
+    margin: 4px 0;
+  }
+  
+  .card-tags {
+    margin-top: 8px;
+  }
+  
+  .card-tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+    font-size: 0.9em;
+  }
+  .card-id{
+    font-size: 1.2em;
+    color: gray;
+  }
+  .fl{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .tdot{
+    padding: 4px 8px;
+    margin-top: 8px;
+    border: 2px solid gray;
+    border-radius: 5px;
+
+  }

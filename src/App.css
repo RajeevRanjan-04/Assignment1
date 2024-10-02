@@ -36,3 +36,76 @@
     transform: rotate(360deg);
   }
 }
+
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.display-controls {
+  display: flex;
+  align-items: center;
+}
+
+.display-controls label {
+  margin-right: 10px;
+}
+
+.group-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.group-header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 1rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-column {
+  flex: 1;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-new-ticket {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-new-ticket:hover {
+  background-color: #218838;
+}
+.gapp{
+  gap: 20px;
+}
+
+.group-title{
+  gap: 30px;
+}
