@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      setError(null); // Reset error state before fetching
+      setError(null);
       try {
         const response = await fetch(
           "https://api.quicksell.co/v1/internal/frontend-assignment"
@@ -42,7 +42,7 @@ const App = () => {
     };
 
     fetchData();
-  }, []); // No dependencies means it only runs once
+  }, []);
 
   const groupCards = (cardsToGroup) => {
     const groupedCards = {};
@@ -65,21 +65,21 @@ const App = () => {
     return Object.keys(cardsToSort).reduce((sorted, key) => {
       const sortedGroup = [...cardsToSort[key]].sort((a, b) => {
         if (sortBy === "priority") {
-          return b.priority - a.priority; // Higher priority first
+          return b.priority - a.priority; 
         } else if (sortBy === "title") {
-          return a.title.localeCompare(b.title); // Alphabetical order
+          return a.title.localeCompare(b.title); 
         }
         return 0;
       });
 
       sorted[key] = sortedGroup;
-      return sorted; // Return the accumulator for the next iteration
+      return sorted;
     }, {});
   };
 
   const processedCards = useMemo(() => {
     const groupedCards = groupCards(cards);
-    return sortCards(groupedCards); // Sort the grouped cards
+    return sortCards(groupedCards);
   }, [cards, sortBy, groupBy]);
 
   if (loading) return <p>Loading...</p>;
@@ -87,7 +87,6 @@ const App = () => {
 
   return (
     <div className="app-container">
-      {/* Controls */}
       <div className="controls">
         <div className="display-controls">
           <label htmlFor="group-by">Grouping:</label>
@@ -112,9 +111,6 @@ const App = () => {
           </select>
         </div>
       </div>
-
-      {/* Group Summary */}
-      {/* Group Summary */}
       <div className="group-summary">
         {Object.keys(processedCards).map((key) => (
           <div key={key} className="group-header">
@@ -158,8 +154,6 @@ const App = () => {
           </div>
         ))}
       </div>
-
-      {/* Cards Display */}
       <div className="card-container">
         {Object.values(processedCards).map((group, index) => (
           <div className="card-column" key={index}>
