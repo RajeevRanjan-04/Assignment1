@@ -1,5 +1,5 @@
 import React from 'react';
-import './Card.css'; // Import CSS for card styling
+import './Card.css'; 
 import tdot from './img/3dot.svg'
 const Card = ({ card, user }) => {
   return (
